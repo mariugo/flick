@@ -4,10 +4,10 @@ import 'package:flick/models/movie_detail_model.dart';
 import 'package:flick/pages/movie_page_controller.dart';
 import 'package:flick/design_system.dart';
 import 'package:flick/utils/duration_converter.dart';
-import 'package:flick/utils/money_converter.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_mobx/flutter_mobx.dart';
 import 'package:flutter_modular/flutter_modular.dart';
+import 'package:intl/intl.dart';
 
 class MovieDetailPage extends StatefulWidget {
   final MovieDetailModel movieItem;
@@ -77,8 +77,7 @@ class _MovieDetailPageState extends State<MovieDetailPage> {
                     top: 36,
                     left: MediaQuery.of(context).size.width / 4,
                     child: Hero(
-                      tag:
-                          widget.movieItem.posterPath ?? widget.movieItem.title,
+                      tag: widget.movieItem.posterPath ?? widget.movieItem.id,
                       child: Card(
                         semanticContainer: true,
                         clipBehavior: Clip.antiAliasWithSaveLayer,
@@ -148,7 +147,7 @@ class _MovieDetailPageState extends State<MovieDetailPage> {
                               mainAxisAlignment: MainAxisAlignment.center,
                               children: [
                                 Text(
-                                  'Titulo original: ',
+                                  'Título original: ',
                                   style: DS.originalTitleText,
                                 ),
                                 Text(
@@ -263,7 +262,9 @@ class _MovieDetailPageState extends State<MovieDetailPage> {
                                     style: DS.budgetProducersText,
                                   ),
                                   Text(
-                                    '\$ ${formatMoney(_movieDetail?.budget ?? 0)}',
+                                    '\$ ' +
+                                        NumberFormat('#,##0', 'en_US')
+                                            .format(_movieDetail?.budget ?? 0),
                                     style: DS.yearDurationBudgetProducerText,
                                   ),
                                 ],

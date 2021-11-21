@@ -2,11 +2,11 @@ import 'package:http/http.dart';
 import 'package:http_get_cache/http_get_cache.dart';
 
 class ApiCachedData {
-  final GetCache _cache;
+  final GetCache _cache = GetCache.instance;
 
-  ApiCachedData._(this._cache);
+  ApiCachedData(GetCache _cache);
 
-  factory ApiCachedData.initialize(GetCache cache) => ApiCachedData._(cache);
+  factory ApiCachedData.initialize(GetCache cache) => ApiCachedData(cache);
 
   String get apiKey =>
       'eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIyNmU0YThhNGUzZGZmOWVmNzZjYzY1YTIzN2M3ZDA5NiIsInN1YiI6IjYwZGM2NjFhY2I5ZjRiMDA1ZjViMmU0MiIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.KOj5K1PN8g2m6Ud8Lo9u9b_PJInpdY6WVU6dgSse5AU';

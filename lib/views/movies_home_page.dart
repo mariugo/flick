@@ -61,7 +61,7 @@ class _MoviesHomePageState extends State<MoviesHomePage>
                           colors: <Color>[
                             Colors.white,
                             Colors.white,
-                            Colors.white.withOpacity(0),
+                            Colors.white.withOpacity(1),
                           ],
                         ),
                       ),
@@ -78,7 +78,7 @@ class _MoviesHomePageState extends State<MoviesHomePage>
                             child: TextField(
                               controller: _searchTextController,
                               decoration: InputDecoration(
-                                fillColor: const Color(0xFFF1F3F5),
+                                fillColor: DS.greyPrimaryColor,
                                 filled: true,
                                 border: const OutlineInputBorder(
                                   borderRadius: BorderRadius.all(
@@ -123,7 +123,7 @@ class _MoviesHomePageState extends State<MoviesHomePage>
                                 },
                               );
                             },
-                          )
+                          ),
                         ],
                       ),
                     ),

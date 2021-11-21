@@ -4,8 +4,8 @@ import 'package:google_fonts/google_fonts.dart';
 class DS {
   static const Color genreSelected = Color.fromRGBO(0, 56, 76, 1);
   static const Color searchBarTextColor = Color.fromRGBO(94, 103, 112, 1);
-  static const Color grayPrimaryColor = Color.fromRGBO(241, 243, 245, 1);
-  static const Color graySecondaryColor = Color.fromRGBO(245, 245, 245, 1);
+  static const Color greyPrimaryColor = Color.fromRGBO(241, 243, 245, 1);
+  static const Color greySecondaryColor = Color.fromRGBO(245, 245, 245, 1);
   static const Color goBackButtonTextColor = Color.fromRGBO(109, 112, 112, 1);
   static const Color ratingDefaultTextColor = Color.fromRGBO(134, 142, 150, 1);
   static const Color movieDetailTitleTextColor = Color.fromRGBO(52, 58, 64, 1);

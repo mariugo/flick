@@ -2,7 +2,6 @@ import 'package:flick/widgets/tab_indicator.dart';
 import 'package:flick/design_system.dart';
 import 'package:flutter/material.dart';
 
-/// TabBarChip descartado
 class TabBarChip extends StatelessWidget {
   final TabController controller;
   const TabBarChip({Key? key, required this.controller}) : super(key: key);
@@ -15,7 +14,7 @@ class TabBarChip extends StatelessWidget {
       labelStyle: DS.genreTextPill,
       indicatorSize: TabBarIndicatorSize.label,
       indicator: const TabIndicator(
-        backgroundColor: Color(0xFF00384C),
+        backgroundColor: DS.genreSelected,
         height: 24,
       ),
       tabs: const [
@@ -48,10 +47,6 @@ class TabBarChip extends StatelessWidget {
   }
 }
 
-/// Cria um tabbar com botões selecionaveis
-/// [OnChanged] é a ação ao mudar de tab
-/// [selectedIndex] guarda a posição da tab selecionada
-/// [labels] é a lista de botões
 class TabChips extends StatelessWidget {
   final ValueChanged<int> onChanged;
   final int selectedIndex;
@@ -64,7 +59,6 @@ class TabChips extends StatelessWidget {
     required this.labels,
   }) : super(key: key);
 
-  // bypass para o toque
   void _handleTap(int value) {
     onChanged(value);
   }
@@ -74,11 +68,11 @@ class TabChips extends StatelessWidget {
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: labels.map<Widget>(
-        (e) {
-          final index = labels.indexOf(e);
+        (genre) {
+          final index = labels.indexOf(genre);
           return ChoiceChip(
             selected: selectedIndex == index,
-            label: Text(e),
+            label: Text(genre),
             labelStyle: selectedIndex == index
                 ? DS.genreTextPill
                 : DS.genreTextPill.copyWith(color: Colors.black),
@@ -88,7 +82,7 @@ class TabChips extends StatelessWidget {
                 _handleTap(index);
               }
             },
-            selectedColor: const Color(0xFF00384C),
+            selectedColor: DS.genreSelected,
           );
         },
       ).toList(),

@@ -7,18 +7,22 @@ import 'package:flutter/material.dart';
 class MovieTile extends StatelessWidget {
   final VoidCallback onTap;
   final MovieDetailModel movie;
-  const MovieTile({Key? key, required this.movie, required this.onTap})
-      : super(key: key);
+
+  const MovieTile({
+    Key? key,
+    required this.movie,
+    required this.onTap,
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return InkWell(
       onTap: onTap,
       child: CachedNetworkImage(
-        imageUrl: movie.posterPath ?? '',
-        placeholderFadeInDuration: const Duration(milliseconds: 888),
-        fadeInDuration: const Duration(milliseconds: 888),
-        fadeOutDuration: const Duration(milliseconds: 888),
+        imageUrl: movie.posterPath ?? 'Sem Imagem',
+        placeholderFadeInDuration: const Duration(milliseconds: 600),
+        fadeInDuration: const Duration(milliseconds: 600),
+        fadeOutDuration: const Duration(milliseconds: 600),
         imageBuilder: (context, imageProvider) {
           return Hero(
             tag: movie.posterPath ?? movie.id,
@@ -62,7 +66,9 @@ class MovieTile extends StatelessWidget {
                       size: const Size.fromHeight(12),
                     ),
                     Text(
-                      movie.genres.map((e) => getGenreNameById(e)).join(' - '),
+                      movie.genres
+                          .map((genre) => getGenreNameById(genre))
+                          .join(' - '),
                       style: DS.genreCardTextTitle,
                     ),
                   ],
@@ -71,17 +77,6 @@ class MovieTile extends StatelessWidget {
             ),
           );
         },
-        // progressIndicatorBuilder: (context, url, progress) {
-        //   return Container(
-        //     width: 320.0,
-        //     height: 470.0,
-        //     decoration: const BoxDecoration(
-        //       borderRadius: BorderRadius.all(Radius.circular(10.0)),
-        //       color: Colors.black12,
-        //     ),
-        //     child: const Center(child: CircularProgressIndicator.adaptive()),
-        //   );
-        // // },
       ),
     );
   }
