@@ -10,7 +10,7 @@ part of 'movie_page_controller.dart';
 
 mixin _$MoviePageController on _MoviePageControllerBase, Store {
   final _$fetchReposFutureAtom =
-      Atom(name: '_MovieDetailControllerBase.fetchReposFuture');
+      Atom(name: '_MoviePageControllerBase.fetchReposFuture');
 
   @override
   ObservableFuture<MovieModel?> get fetchReposFuture {
@@ -25,7 +25,7 @@ mixin _$MoviePageController on _MoviePageControllerBase, Store {
     });
   }
 
-  final _$isLoadingAtom = Atom(name: '_MovieDetailControllerBase.isLoading');
+  final _$isLoadingAtom = Atom(name: '_MoviePageControllerBase.isLoading');
 
   @override
   bool get isLoading {
@@ -41,7 +41,7 @@ mixin _$MoviePageController on _MoviePageControllerBase, Store {
   }
 
   final _$fetchReposAsyncAction =
-      AsyncAction('_MovieDetailControllerBase.fetchRepos');
+      AsyncAction('_MoviePageControllerBase.fetchRepos');
 
   @override
   Future<MovieModel?> fetchRepos(int movieId) {
