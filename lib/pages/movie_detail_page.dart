@@ -1,13 +1,14 @@
 import 'package:cached_network_image/cached_network_image.dart';
-import 'package:flick/models/movie_model.dart';
-import 'package:flick/models/movie_detail_model.dart';
-import 'package:flick/pages/movie_page_controller.dart';
-import 'package:flick/design_system.dart';
-import 'package:flick/utils/duration_converter.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_mobx/flutter_mobx.dart';
 import 'package:flutter_modular/flutter_modular.dart';
 import 'package:intl/intl.dart';
+
+import '/models/movie_model.dart';
+import '/models/movie_detail_model.dart';
+import '/pages/movie_page_controller.dart';
+import '/design_system.dart';
+import '/utils/duration_converter.dart';
 
 class MovieDetailPage extends StatefulWidget {
   final MovieDetailModel movieItem;

@@ -1,4 +1,4 @@
-import 'package:flick/models/genre_model.dart';
+import 'genre_model.dart';
 
 class MovieModel {
   final int id;

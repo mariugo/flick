@@ -1,6 +1,7 @@
-import 'package:flick/models/movie_model.dart';
-import 'package:flick/repository/api_repository.dart';
 import 'package:mobx/mobx.dart';
+
+import '/models/movie_model.dart';
+import '/repository/api_repository.dart';
 
 part 'movie_page_controller.g.dart';
 

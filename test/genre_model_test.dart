@@ -1,4 +1,5 @@
 import 'package:flutter_test/flutter_test.dart';
+
 import 'package:flick/models/genre_model.dart';
 
 void main() {

@@ -1,9 +1,10 @@
-import 'package:flick/models/movie_detail_model.dart';
-import 'package:flick/repository/api_repository.dart';
-import 'package:flick/utils/bouncer.dart';
 import 'package:flutter/material.dart';
 import 'package:infinite_scroll_pagination/infinite_scroll_pagination.dart';
 import 'package:mobx/mobx.dart';
+
+import '/models/movie_detail_model.dart';
+import '/repository/api_repository.dart';
+import '/utils/bouncer.dart';
 
 part 'movies_home_controller.g.dart';
 

@@ -1,4 +1,4 @@
-import 'package:flick/models/genre_model.dart';
+import '/models/genre_model.dart';
 
 final genreList = [
   GenreModel(id: 28, name: 'Ação'),

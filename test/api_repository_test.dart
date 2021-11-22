@@ -1,10 +1,11 @@
 @Timeout(Duration(seconds: 5))
 
 import 'dart:convert';
-import 'package:flick/models/movie_detail_model.dart';
-import 'package:flick/models/movie_model.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:http/http.dart' as http;
+
+import 'package:flick/models/movie_detail_model.dart';
+import 'package:flick/models/movie_model.dart';
 
 void main() {
   final client = http.Client();

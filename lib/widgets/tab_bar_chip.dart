@@ -1,6 +1,7 @@
-import 'package:flick/widgets/tab_indicator.dart';
-import 'package:flick/design_system.dart';
 import 'package:flutter/material.dart';
+
+import '/widgets/tab_indicator.dart';
+import '/design_system.dart';
 
 class TabBarChip extends StatelessWidget {
   final TabController controller;

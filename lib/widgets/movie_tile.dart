@@ -1,8 +1,9 @@
-import 'package:cached_network_image/cached_network_image.dart';
-import 'package:flick/models/movie_detail_model.dart';
-import 'package:flick/design_system.dart';
-import 'package:flick/utils/genre_list_decoder.dart';
 import 'package:flutter/material.dart';
+import 'package:cached_network_image/cached_network_image.dart';
+
+import '/models/movie_detail_model.dart';
+import '/design_system.dart';
+import '/utils/genre_list_decoder.dart';
 
 class MovieTile extends StatelessWidget {
   final VoidCallback onTap;
@@ -26,7 +27,9 @@ class MovieTile extends StatelessWidget {
         imageBuilder: (context, imageProvider) {
           return Hero(
             tag: movie.posterPath ?? movie.id,
-            child: Container(
+            child: AnimatedContainer(
+              duration: const Duration(seconds: 5),
+              curve: Curves.easeIn,
               width: 320.0,
               height: 470.0,
               decoration: BoxDecoration(

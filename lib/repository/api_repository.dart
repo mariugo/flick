@@ -1,8 +1,8 @@
 import 'dart:convert';
 
-import 'package:flick/api_cached/api_cached_data.dart';
-import 'package:flick/models/movie_detail_model.dart';
-import 'package:flick/models/movie_model.dart';
+import '/api_cached/api_cached_data.dart';
+import '/models/movie_detail_model.dart';
+import '/models/movie_model.dart';
 
 class ApiRepository {
   final ApiCachedData apiCachedData;

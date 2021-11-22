@@ -1,9 +1,10 @@
-import 'package:flick/pages/movie_detail_page.dart';
-import 'package:flick/pages/movie_page_controller.dart';
-import 'package:flick/repository/api_repository.dart';
-import 'package:flick/views/movies_home_controller.dart';
-import 'package:flick/views/movies_home_page.dart';
 import 'package:flutter_modular/flutter_modular.dart';
+
+import '/pages/movie_detail_page.dart';
+import '/pages/movie_page_controller.dart';
+import '/repository/api_repository.dart';
+import '/views/movies_home_controller.dart';
+import '/views/movies_home_page.dart';
 
 class MoviesModule extends Module {
   @override
