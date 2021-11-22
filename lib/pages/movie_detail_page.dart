@@ -35,7 +35,7 @@ class _MovieDetailPageState extends State<MovieDetailPage> {
       body: CustomScrollView(
         slivers: <Widget>[
           SliverAppBar(
-            backgroundColor: const Color(0xFFF5F5F5),
+            backgroundColor: DS.greySecondaryColor,
             foregroundColor: Colors.black,
             primary: true,
             pinned: false,
@@ -69,7 +69,7 @@ class _MovieDetailPageState extends State<MovieDetailPage> {
                       child: Container(
                         height: 203,
                         width: MediaQuery.of(context).size.width,
-                        color: const Color(0xFFF5F5F5),
+                        color: DS.greySecondaryColor,
                       ),
                     ),
                   ),
@@ -206,7 +206,7 @@ class _MovieDetailPageState extends State<MovieDetailPage> {
                                         padding: const EdgeInsets.all(6),
                                         decoration: BoxDecoration(
                                           border: Border.all(
-                                            color: const Color(0xFFE9ECEF),
+                                            color: DS.greySecondaryColor,
                                           ),
                                           borderRadius: const BorderRadius.all(
                                             Radius.circular(5),
@@ -250,7 +250,7 @@ class _MovieDetailPageState extends State<MovieDetailPage> {
                                 top: 8,
                               ),
                               decoration: const BoxDecoration(
-                                color: Color(0xFFF1F3F5),
+                                color: DS.greySecondaryColor,
                                 borderRadius: BorderRadius.all(
                                   Radius.circular(5),
                                 ),
@@ -281,7 +281,7 @@ class _MovieDetailPageState extends State<MovieDetailPage> {
                                 right: 16,
                               ),
                               decoration: const BoxDecoration(
-                                color: Color(0xFFF1F3F5),
+                                color: DS.greySecondaryColor,
                                 borderRadius: BorderRadius.all(
                                   Radius.circular(5),
                                 ),
