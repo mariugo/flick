@@ -31,6 +31,12 @@ class _MoviesHomePageState extends State<MoviesHomePage>
   }
 
   @override
+  void dispose() {
+    _searchTextController.dispose();
+    super.dispose();
+  }
+
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: CustomScrollView(
